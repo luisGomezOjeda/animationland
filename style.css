@@ -1,0 +1,409 @@
+body{
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  counter-reset:game;
+  font-family: 'Rock 3D', cursive;
+}
+
+.phone{
+  margin: auto;
+  position: relative;
+  border: solid 8px black;
+  border-radius: 40px;
+  height: 600px;
+  width: 300px;
+  background:linear-gradient(0deg,rgb(21, 101, 182),#031b25);
+  box-shadow:0 19px 38px rgba(0, 0, 0, 0.274),0 15px 12px rgba(0, 0, 0, 0.185);
+}
+
+input[type=checkbox]{
+  position: absolute;
+  appearance: none;
+  cursor: pointer;
+  z-index: 1;
+  width: 70px;
+  height: 50px;
+}
+
+input:checked{
+  counter-increment:game;
+}
+
+.phone h1{
+  margin: auto;
+  position: absolute;
+  right:45px;
+  left: 45px;
+  top: 20px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.phone  h3{
+  color: white;
+  font-size: 1.6rem;
+  position:absolute;
+  top: 25px;
+  left: 100px;
+}
+
+.phone  h3::after{
+  content: counter(game);
+}
+
+.layer-1{
+  position: absolute;
+  z-index: 1;
+  height: 450px;
+  width: 80px;
+  background: transparent;
+  bottom: 0;
+  right: 60px;
+  animation-name:layer-1;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes layer-1{
+0%{
+    bottom: 0;
+  }
+25%{
+  bottom: -60px;
+  }
+100%{
+  bottom: 0;
+}
+}
+
+.layer-2{
+  position: absolute;
+  z-index: 2;
+  height: 450px;
+  width: 80px;
+  background: transparent;
+  bottom: 0;
+  right: 150px;
+  animation-name: layer-2;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes layer-2{
+  0%{
+    bottom: 0;
+  }
+  50%{
+    bottom: -60px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+.layer-3{
+  position: absolute;
+  z-index: 3;
+  width: 220px;
+  height: 400px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  border-radius: 33px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 33px;
+}
+
+.layer-4{
+  position: absolute;
+  z-index: 4;
+  height: 365px;
+  width: 80px;
+  bottom: 0;
+  margin-left: 26px;
+  background: transparent;
+  animation-name: layer-4;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation-iteration-count: infinite;
+}
+
+@keyframes layer-4{
+  0%{
+    bottom: 0;
+  }
+  75%{
+    bottom: -65px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+.layer-5{
+  position: absolute;
+  z-index: 5;
+  width: 200px;
+  height: 320px;
+  bottom: 0;
+  border-radius: 33px;
+}
+
+.layer-6{
+  position: absolute;
+  z-index: 6;
+  width: 80px;
+  height: 255px;
+  background-color: transparent;
+  bottom: 0;
+  right: 0;
+  margin-right: 55px;
+  animation-name: layer-6;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes layer-6{
+  0%{
+    bottom: 0;
+  }
+  25%{
+    bottom: -60px;
+  }
+  50%{
+    bottom: 0;
+  }
+  85%{
+    bottom: -60px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+
+.layer-7{
+  position: absolute;
+  z-index: 7;
+  width: 200px;
+  height: 220px;
+  bottom: 0;
+  right: 0;
+  border-radius: 33px;
+}
+
+.layer-8{
+  position: absolute;
+  z-index: 8;
+  width: 200px;
+  height:180px;
+  left:0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+
+.layer-9{
+  position: absolute;
+  z-index: 9;
+  width:100px;
+  height: 120px;
+  bottom:-18px;
+  left: 0;
+}
+
+.layer-10{
+  position: absolute;
+  z-index: 10;
+  width:100px;
+  height:120px;
+  bottom: -18px;
+  right: 0;
+  border-radius: 33px 33px 33px 0;
+}
+
+.layer-11{
+  z-index: 11;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: -20.5px;
+  margin: 0 auto;
+}
+.left-ear--ouder{
+  background-color:white;
+  border-radius: 90%;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  left: 10px;
+}
+
+.left-ear--inner{
+  background-color:pink;
+  border-radius: 90%;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+  left: 15px;
+  top: 5px;
+}
+
+.right-ear--ouder{
+  background-color:white;
+  border-radius: 100%;
+  width: 20px;
+  height: 50px;
+  position: absolute;
+  right: 10px;
+}
+
+.right-ear--inner{
+  background-color: pink;
+  border-radius: 100%;
+  width: 10px;
+  height: 50px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
+
+.head{
+  width: 80%;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  margin-top:35px ;
+}
+
+.head__eye--left{
+  position: absolute;
+  left: 0;
+  margin-left:25px;
+  margin-top: 12.5px;
+  width: 4px;
+  height: 4px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.head__eye--right{
+  position: absolute;
+  right: 0;
+  margin-right: 25px;
+  margin-top: 12.5px;
+  width: 4px;
+  height: 4px;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.head_b{
+  width: 70%;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  margin-top:30px;
+}
+
+.head__eye--left_b{
+  background-color: black;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  margin-left:20px;
+  margin-top: 13px;
+}
+
+.head__eye--right_b{
+  background-color: black;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  margin-right:20px;
+  margin-top: 13px;
+}
+
+.head_c{
+  width: 60%;
+  height: 65px;
+  background-color: white;
+  position: absolute;
+  border-radius: 100%;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  margin-top:20px;
+}
+
+.head__eye--left_c{
+  background-color: black;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  margin-left:15px;
+  margin-top: 12px;
+}
+
+.head__eye--right_c{
+  background-color: black;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0px;
+  margin-right:15px;
+  margin-top: 12px;
+}
+
+.head__eye{
+  animation-name:blink;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes blink{
+  0%{
+    height: 4px;
+  }
+  5%{
+    transform: translate(0,2px);
+    height: 1px;
+  }
+  10%{
+    height: 4px;
+    transform: translate(0px,0px);
+  }
+}
